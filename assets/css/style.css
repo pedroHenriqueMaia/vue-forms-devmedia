@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+
+/*
+-estilo do corpo do projeto
+-Responsavel pela fonte
+-Cor de fundo Cinza fora do form
+-zerando o padding e o margin para a barra do 'header' poder ficar colada no topo
+*/
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #e2e2e2;
+    font-family: Montserrat
+}
+
+/*Estilo da barra encima formulario*/
+header {
+    padding: 15px 20px;
+    background: #1f4f66;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+/*
+estilo da fonte do header
+*/
+.titulo-header {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/*Responsavel por centralizar o formularrio*/
+#main {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+/*responsavel por deixar os formularios alinhados*/
+.formularios {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*
+-Responsavel pelo acabamento do forms
+-cor de fundo
+-bordas arredondadas
+-centralização
+*/
+.form-box, .box-mensagem {
+    background: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    padding: 0;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+.form-box {
+    width: calc( (100% - 15px) / 2);
+}
+
+/*margin encima da imagem*/
+.form-box img {
+    margin-top: 10px;
+}
+
+/*estilo do titulo*/
+.titulo {
+    color: #0482bd;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 30px;
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+
+.subtitulo {
+    font-weight: 300;
+}
+
+/*centralização do input e do button*/
+.form-box form{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 600px;
+}    
+
+/*acabamento do input*/
+input[type="text"] {
+    height: 40px;
+    outline: none;
+    font-size: 16px;
+    margin: 0 10px 10px; 
+    padding: 0 10px;
+    background-color: #e2e2e2;
+    border: none;
+    text-align: center;
+}
+
+/*acabamento do button*/
+input[type="submit"] {
+    background-color: #0482bd;
+    border: none;
+    height: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 0;   
+    cursor: pointer;
+}
+
+/*cor para a fonte do erro*/
+.titulo-erro{
+    color: #f00;
+}
+
+/*Estilos para tela de 700px*/
+@media (max-width: 700px) {
+    .form-box {
+        width: 100%;
+        margin: 0px 20px 10px;
+    }
+
+    .form-box form{
+        max-width: none;
+
+    }
+}
+
+/*Estilos para tela de 425px*/
+@media (max-width: 425px) { 
+    .titulo-header {
+        font-size: 16px;
+    }
+
+    .titulo {
+        font-size: 18px;
+    }
+
+    input[type="text"]{
+        font-size: 14px;
+    }
+
+    .form-box {
+        margin: 0 10px 10px;
+    }
+
+}
